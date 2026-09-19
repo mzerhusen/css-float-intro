@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to the CSS Float Property</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Floating with CSS</h1>
+
+  <p>The CSS <code>float</code> property lets an element move to the left or right side of its container while nearby text wraps around it. Floats were once used for entire page layouts, but modern web designers usually use Flexbox and Grid for major layout work.</p>
+
+  <p>Today, floats are still useful for smaller layout effects, especially when you want text to wrap around an image, figure, pull quote, or other small piece of content.</p>
+
+  <!-- During the exercise, we will turn this image into a figure with a caption. -->
+  <img src="ivan-cookie.jpg" alt="Ivan and Cookie sitting together">
+
+  <p>In this exercise, we will use a photo of Ivan and Cookie to see how floating works. First, we will try floating the image by itself. Then we will wrap the image in a figure so the caption can move with the image as one connected unit.</p>
+
+  <p>This is an important idea in web design: sometimes you should style the individual element, and sometimes you should style the container that holds several related elements together.</p>
+
+  <p>As you work through the exercise, pay attention to how the text reacts when the image or figure is floated. The text does not simply move below the image. Instead, it flows around the floated element, almost like water flowing around a rock in a stream.</p>
+
+  <!-- This is just an image so it doesn't need to be a figure -->
+  <img src="nap.jpg" alt="Ivan and Cookie taking a cat nap">
+
+  <p>The second image gives us another chance to practice floating. Once you understand how the first floated figure works, we can use this image to try floating content in the opposite direction.</p>
+
+  <p>This also helps demonstrate why we do not usually want to float every image on the page at once. A broad rule like <code>img { float: right; }</code> affects every image, even when we only meant to target one specific image or figure.</p>
+
+  <p>After both figures have been floated, the next section may try to wrap around them. That is where the <code>clear</code> property becomes useful. Clearing a section tells the browser that the section should start below the floated content instead of squeezing beside it.</p>
+
+  <section class="float-notes">
+    <h2>How Floats Work</h2>
+
+    <p>The most common float values are <code>left</code>, <code>right</code>, and <code>none</code>. A left float moves the element to the left side of its container. A right float moves it to the right side. The value <code>none</code> removes the float and returns the element to normal document flow.</p>
+
+    <p>Floats can be useful, but they also have quirks. When an element is floated, surrounding text may wrap beside it. Sometimes, that's exactly what you want. Other times, later content may wrap in ways you didn't expect.</p>
+
+    <p>The <code>clear</code> property helps control what happens after a floated element. For example, <code>clear: both;</code> tells an element to move below any floated elements on either side. This is useful when you want a new section to start underneath a float instead of continuing beside it.</p>
+
+    <p>Floated images also need spacing. If there is no margin, the text may sit too close to the image. Adding margin on the side of the float creates breathing room and makes the page easier to read.</p>
+
+    <p>Finally, images often need a responsive image rule. A common rule is <code>max-width: 100%;</code> and <code>height: auto;</code>. This allows images to shrink to fit inside their containers while keeping their proportions correct.</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Finder tags
+*.DS_Store
+._*
+
+# Thumbnail cache files
+._*
+
+# Files that might appear on network shares
+.Spotlight-V100
+.Trashes
+
+# macOS volume info
+.VolumeIcon.icns
+
+# macOS metadata files
+com.apple.timemachine.supported
+com.apple.metadata:*
+
+# Node and dependency folders (optional, if using npm)
+node_modules/
+
+# Backup files
+*.bak
+*.tmp
+*.swp
